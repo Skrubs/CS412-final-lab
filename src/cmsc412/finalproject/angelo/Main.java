@@ -76,12 +76,31 @@ public class Main {
 	}
 	
 	public void displayAlgorithm() {
-		System.out.println("------------------------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------------------------------");
 		System.out.print("Reference String | ");
 		for(int i = 0; i < referenceString.length(); i++) {
 			System.out.print(referenceString.charAt(i) + " | ");
 		}
 		System.out.println();
+		for(int i = 0; i < numberOfFrames; i++) {
+			System.out.print("Physical Frame " + i + " |");
+			for(int j = 0; j < referenceString.length(); j++) {
+				System.out.print(" " + "  |");
+			}
+			System.out.println();
+		}
+		System.out.println("-----------------------------------------------------------------------------------");
+		System.out.print("Page Faults:     | ");
+		for(int i = 0; i < referenceString.length(); i++) {
+			System.out.print(numberOfPageFaults + " | ");
+		}
+		System.out.println();
+		System.out.print("Victim Pages:    | ");
+		for(int i = 0; i < referenceString.length(); i++) {
+			System.out.print(victimPage + "  | ");
+		}
+		System.out.println();
+		
 		
 	}
 
